@@ -1,0 +1,22 @@
+Importance,Category,Task
+88,Core,"Design and validate clinical databases, including designing or testing logic checks."
+84,Core,"Process clinical data, including receipt, entry, verification, or filing of information."
+83,Core,"Generate data queries, based on validation checks or errors and omissions identified during data entry, to resolve identified problems."
+82,Core,"Develop project-specific data management plans that address areas such as coding, reporting, or transfer of data, database locks, and work flow processes."
+76,Core,Monitor work productivity or quality to ensure compliance with standard operating procedures.
+75,Core,Prepare appropriate formatting to data sets as requested.
+74,Core,"Design forms for receiving, processing, or tracking data."
+74,Core,"Prepare data analysis listings and activity, performance, or progress reports."
+70,Core,"Confer with end users to define or implement clinical system requirements such as data release formats, delivery schedules, and testing protocols."
+68,Core,"Perform quality control audits to ensure accuracy, completeness, or proper usage of clinical systems and data."
+68,Core,Analyze clinical data using appropriate statistical tools.
+68,Core,"Evaluate processes and technologies, and suggest revisions to increase productivity and efficiency."
+66,Core,Develop technical specifications for data management programming and communicate needs to information technology staff.
+65,Core,"Write work instruction manuals, data capture guidelines, or standard operating procedures."
+61,Core,"Track the flow of work forms, including in-house data flow or electronic forms transfer."
+61,Core,Supervise the work of data management project staff.
+61,Core,"Contribute to the compilation, organization, and production of protocols, clinical study reports, regulatory submissions, or other controlled documentation."
+56,Core,Read technical literature and participate in continuing education or professional associations to maintain awareness of current database technology and best practices.
+54,Core,Train staff on technical procedures or software program usage.
+54,Supplemental,Develop or select specific software programs for various research scenarios.
+46,Supplemental,"Provide support and information to functional areas such as marketing, clinical monitoring, and medical affairs."

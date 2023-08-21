@@ -18,6 +18,13 @@ def download_occupation_data(occupation_url):
 
 
     
+jobs = ["https://www.onetonline.org/link/details/15-2041.01",
+        "https://www.onetonline.org/link/details/15-2021.00",
+        "https://www.onetonline.org/link/details/15-1299.03",
+        "https://www.onetonline.org/link/details/15-2041.00"]
+
+#for url in jobs:
+    #download_occupation_data(url)
 
 
-download_occupation_data("https://www.onetonline.org/link/details/15-2051.02")
+download_occupation_data("https://www.onetonline.org/link/details/19-2099.01")

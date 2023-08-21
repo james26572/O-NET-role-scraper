@@ -1,0 +1,36 @@
+Section,Category,Example
+Technology,Analytical or scientific software,IBM SPSS Statistics
+Technology,Analytical or scientific software,Minitab
+Technology,Analytical or scientific software,SAS
+Technology,Analytical or scientific software,The MathWorks MATLAB
+Technology,Business intelligence and data analysis software,Apache Spark
+Technology,Business intelligence and data analysis software,Qlik Tech QlikView
+Technology,Business intelligence and data analysis software,Tableau
+Technology,Data base management system software,Apache Hadoop
+Technology,Data base management system software,Apache Pig
+Technology,Data base management system software,Teradata Database
+Technology,Data base user interface and query software,Amazon Redshift
+Technology,Data base user interface and query software,IBM DB2
+Technology,Data base user interface and query software,Microsoft SQL Server
+Technology,Data base user interface and query software,Structured query language SQL
+Technology,Data mining software,Angoss KnowledgeSEEKER
+Technology,Data mining software,NCR Teradata Warehouse Miner
+Technology,Data mining software,SAS Enterprise Miner
+Technology,Development environment software,Common business oriented language COBOL
+Technology,Development environment software,Formula translation/translator FORTRAN
+Technology,Development environment software,Microsoft Visual Basic
+Technology,Development environment software,Microsoft Visual Basic for Applications VBA
+Technology,Enterprise application integration software,Extensible markup language XML
+Technology,Enterprise application integration software,SAS/CONNECT
+Technology,Enterprise resource planning ERP software,SAP software
+Technology,Object or component oriented development software,C++
+Technology,Object or component oriented development software,Python
+Technology,Object or component oriented development software,R
+Technology,Object or component oriented development software,Sun Microsystems Java
+Technology,Object oriented data base management software,Microsoft Visual FoxPro
+Technology,Office suite software,Microsoft Office software
+Technology,Operating system software,Linux
+Technology,Operating system software,UNIX
+Technology,Presentation software,Microsoft PowerPoint
+Technology,Spreadsheet software,Microsoft Excel
+Technology,Word processing software,Microsoft Word

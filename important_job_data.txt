@@ -1,0 +1,14 @@
+tasks -- not standardized, used fuzzy matching functions to test out different ways of finding 
+similar tasks. Narrowed 6 fuzzy matching functions to 1. Generated all possible combinations of tasks
+pairs between BI analyst and every other occupation in directory. Computed the similarity ratio using the token
+set function. Token set ratio removes duplicate words in a string and then computes the fuzz ratio.
+We consider token set ratios above the 95th percentile of generated scores for all combinations as similar
+tasks.
+
+
+technology skills -- standardized
+work activities -- standardized
+detailed work activities -- standardized
+skills -- standardized
+
+

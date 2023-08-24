@@ -1,42 +1,52 @@
 import pandas as pd
 
 biostat_tasks = pd.read_csv("C:/Users/buckl/SkillsTrust/O-NET-role-scraper/occupations/Biostatisticians/work_activities.csv", header=0, encoding='utf-8', encoding_errors='replace')
-stat_tasks = pd.read_csv("C:/Users/buckl/SkillsTrust/O-NET-role-scraper/occupations/Statisticians/work_activities.csv", header=0, encoding='utf-8', encoding_errors='replace')
 bis_analyst = pd.read_csv("C:/Users/buckl/SkillsTrust/O-NET-role-scraper/occupations/Business Intelligence Analysts/work_activities.csv", header=0, encoding='utf-8', encoding_errors='replace')
 clin_data_managers = pd.read_csv("C:/Users/buckl/SkillsTrust/O-NET-role-scraper/occupations/Clinical Data Managers/work_activities.csv", header=0, encoding='utf-8', encoding_errors='replace')
-remote_sensing_scientist = pd.read_csv("C:/Users/buckl/SkillsTrust/O-NET-role-scraper/occupations/Remote Sensing Scientists and Technologists/work_activities.csv", header=0, encoding='utf-8', encoding_errors='replace')
-doc_man_spec = pd.read_csv("C:/Users/buckl/SkillsTrust/O-NET-role-scraper/occupations/Document Management Specialists/work_activities.csv", header=0, encoding='utf-8', encoding_errors='replace')
+market = pd.read_csv("C:/Users/buckl/SkillsTrust/O-NET-role-scraper/occupations/Market Research Analysts and Marketing Specialists/work_activities.csv", header=0, encoding='utf-8', encoding_errors='replace')
+advertising = pd.read_csv("C:/Users/buckl\SkillsTrust\O-NET-role-scraper\occupations\Advertising and Promotions Managers/work_activities.csv", header=0, encoding='utf-8', encoding_errors='replace')
 fin_quan_analyst = pd.read_csv("C:/Users/buckl/SkillsTrust/O-NET-role-scraper/occupations/Financial Quantitative Analysts/work_activities.csv", header=0, encoding='utf-8', encoding_errors='replace')
 man_analyst = pd.read_csv("C:/Users/buckl/SkillsTrust/O-NET-role-scraper/occupations/Management Analysts/work_activities.csv", header=0, encoding='utf-8', encoding_errors='replace')
 mathematicians = pd.read_csv("C:/Users/buckl/SkillsTrust/O-NET-role-scraper/occupations/Mathematicians/work_activities.csv", header=0, encoding='utf-8', encoding_errors='replace')
 ops_research_analysts = pd.read_csv("C:/Users/buckl/SkillsTrust/O-NET-role-scraper/occupations/Operations Research Analysts/work_activities.csv", header=0, encoding='utf-8', encoding_errors='replace')
+
+
+
+
+
 def compare_work_activities(occ1,occ2):
     matches = 0
-    num_BI_skills = len(occ2['Work Activity'].tolist())
+    work_ratings = occ1['Importance'].tolist()
+
+    num_work_ratings_over_50 = len([val for val in work_ratings if val >=50])
     
 
-    for work_activity1 in occ1['Work Activity'].tolist():
-        if work_activity1 in occ2['Work Activity'].tolist():
+    for work_activity1,importance in zip(occ1['Work Activity'].tolist(),occ1['Importance'].tolist()):
+        for work_activity2,importance2 in zip(occ2['Work Activity'].tolist(),occ2['Importance']):
+                if work_activity1 == work_activity2:
+                     if abs(importance-importance2)<=5:
+                        if importance >=50 and importance2>=50:
             
-                matches += 1
-    return matches,round((matches/num_BI_skills)*100,2)
+                            matches += 1
+    return matches,round((matches/num_work_ratings_over_50)*100,2)
 
 
 
 
 
 occupations_tasks_dict = {
-    'Biostatisticians': biostat_tasks,
-    'Statisticians': stat_tasks,
+
     'Business Intelligence Analysts': bis_analyst,
+    'Biostatisticians': biostat_tasks,
     'Clinical Data Managers': clin_data_managers,
-    'Remote Sensing Scientists and Technologists': remote_sensing_scientist,
-    'Document Management Specialists': doc_man_spec,
     'Financial Quantitative Analysts': fin_quan_analyst,
     'Management Analysts': man_analyst,
     'Mathematicians': mathematicians,
-    'Operations Research Analysts': ops_research_analysts
+    'Operations Research Analysts': ops_research_analysts,
+    'Advertising and Promotions Manager':advertising,
+    'Market Research Analysts and Marketing Specialists':market
 }
+
 
 
 import numpy as np
@@ -56,4 +66,4 @@ def get_work_activities_corrs():
 
 
 
-#print(get_work_activities_corrs())
+print(get_work_activities_corrs())

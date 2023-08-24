@@ -27,4 +27,4 @@ jobs = ["https://www.onetonline.org/link/details/15-2041.01",
     #download_occupation_data(url)
 
 
-download_occupation_data("https://www.onetonline.org/link/details/19-2099.01")
+download_occupation_data("https://www.onetonline.org/link/details/13-1161.00")

@@ -14,7 +14,8 @@ import numpy as np
 
 tech_skills_corrs = get_occ_tech_skills_corrs()
 detailed_work_activities_corrs = get_occ_detailed_work_activities_corrs()
-task_corrs = np.load('matrix_data_working.npy')/100
+task_corrs = np.load('matrix_data_working.npy')
+
 
 
 
@@ -22,19 +23,33 @@ skills_corrs = get_occ_skill_corrs()
 work_activities_corrs = get_work_activities_corrs()
 
 abilities = get_abilities_corrs()
-knowledge = get_knowledge_corrs()
+#knowledge = get_knowledge_corrs()
 
 
 
-#avg_occ_corrs = (tech_skills_corrs+detailed_work_activities_corrs+task_corrs+skills_corrs+work_activities_corrs+abilities)/600
+avg_occ_corrs = (0.9*tech_skills_corrs+
+                 0.9*detailed_work_activities_corrs+
+                 0.9*task_corrs+
+                 0.9*skills_corrs+
+                 1.5*work_activities_corrs+
+                 0.9*abilities)/600
 
 
-avg_occ_corrs = task_corrs
+    
 
-occs = ['Business Intelligence Analysts', 'Biostatisticians', 'Clinical Data Managers',
-         'Financial Quantitative Analysts', 'Management Analysts', 'Mathematicians',
-           'Operations Research Analysts', 'Advertising and Promotions Manager',
-             'Market Research Analysts and Marketing Specialists']
+
+
+occs =  [
+    "BIA",   # Business Intelligence Analyst
+    "BIOSTA",  # Biostatistician
+    "CDM",   # Clinical Data Manager
+    "FQA",   # Financial Quantitative Analyst
+    "MA",    # Management Analyst
+    "MATH",  # Mathematician
+    "ORA",   # Operations Research Analyst
+    "APM",   # Advertising and Promotions Manager
+    "MRAM"   # Market Research Analysts and Marketing Specialists
+]
 
 # Create the heatmap using seaborn
 ax = sns.heatmap(
@@ -42,13 +57,15 @@ ax = sns.heatmap(
     vmin=0, vmax=1, 
     cmap=sns.diverging_palette(20, 220, n=200),
     square=True,
+    annot = True,
+    fmt = ".2f",
     xticklabels=occs,  # Set custom tick labels for columns
     yticklabels=occs  # Set custom tick labels for rows
 )
 ax.set_xticklabels(
     ax.get_xticklabels(),
-    rotation=15,
-    fontsize = 5,
+    rotation=30,
+    fontsize = 10,
     horizontalalignment='right'
 )
 
